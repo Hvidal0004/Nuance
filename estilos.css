@@ -24,7 +24,7 @@ a:hover {
 
 /* Estilo para los botones */
 .button {
-    background-color: #d6cfc8;
+    background-color: #d7b58f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -33,14 +33,14 @@ a:hover {
 }
 
 .button:hover {
-    background-color: #c9c4b5;
+    background-color: #d7b58f;
     transition: background-color 0.3s ease;
 }
 
 
 /* Estilos para el menú de navegación */
 nav {
-    background-color: #d6cfc8;
+    background-color: #d7b58f;
     padding: 20px;
     text-align: center;
 }
@@ -89,7 +89,7 @@ nav ul {
 
 /* inicio */
 #inicio {
-    background-color: #d6cfc8;
+    background-color: #d7b58f;
     padding: 20px;
     text-align: center;
 }
@@ -165,7 +165,7 @@ nav ul {
 }
 
 .carousel-controls button {
-    background-color: #d6cfc8;
+    background-color: #d7b58f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -174,7 +174,7 @@ nav ul {
 }
 
 .carousel-controls button:hover {
-    background-color: #c9c4b5;
+    background-color: #d7b58f;
     transition: background-color 0.3s ease;
 }
 
@@ -240,7 +240,7 @@ nav ul {
 /* Apla Nuance*/
 
 #apla-nuance {
-    background-image: linear-gradient(to bottom, #d6cfc8, #ffffff);
+    background-image: linear-gradient(to bottom, #d7b58f, #ffffff);
     padding: 20px;
     text-align: center;
 }
@@ -264,14 +264,14 @@ nav ul {
 /* Footer */
 
 footer {
-    background-color: #d6cfc8;
+    background-color: #d7b58f;
     padding: 10px;
     text-align: center;
     color: white;
 }
 
 .footer-social {
-    background-color: #d6cfc8;
+    background-color: #d7b58f;
     padding: 10px;
     text-align: center;
 }
