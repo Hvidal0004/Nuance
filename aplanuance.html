@@ -1,43 +1,72 @@
-<!-- Apla Nuance -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AplaNuance</title>
+    <title>AplaNuance - Productos Exclusivos</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
     <nav>
         <ul>
-            <li><a href="index.html">Índice</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="tienda.html">Tienda</a></li>
             <li><a href="aplanuance.html">AplaNuance</a></li>
             <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
             <li><a href="contactanos.html">Contactanos</a></li>
         </ul>
     </nav>
-</head>
-<body>
 
-<section id="apla-nuance">
-    <h1>Apla Nuance</h1>
-    <p>Productos limitados con sorteos exclusivos.</p>
-    <div class="producto-limitado">
-        <img src="producto-limitado.jpg" alt="Producto Limitado">
-        <p>Participa en un sorteo para un viaje en yate.</p>
-    </div>
-</section>
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Nuance. Todos los derechos reservados.</p>
-
-    <div class="footer-social">
-        <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <section id="apla-nuance">
+        <div class="apla-header">
+            <h1>Apla Nuance</h1>
+            <p class="tagline">Productos limitados con sorteos exclusivos.</p>
         </div>
-    </div>
-</footer>
+        
+        <div class="producto-limitado-container">
+            <div class="producto-limitado">
+                <div class="producto-info">
+                    <h2>Experiencia Exclusiva</h2>
+                    <p class="descripcion">Participa en un sorteo para un viaje en yate por las costas mediterráneas.</p>
+                    <p class="tiempo-restante">Tiempo restante: <span id="countdown">7 días, 12 horas</span></p>
+                    <button class="btn-participar">Participar Ahora</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="beneficios">
+            <h2>Beneficios AplaNuance</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio">
+                    <i class="fas fa-star"></i>
+                    <h3>Productos Exclusivos</h3>
+                    <p>Acceso a productos que solo los miembros pueden obtener.</p>
+                </div>
+                <div class="beneficio">
+                    <i class="fas fa-gift"></i>
+                    <h3>Sorteos Mensuales</h3>
+                    <p>Participación automática en nuestros sorteos de experiencias únicas.</p>
+                </div>
+                <div class="beneficio">
+                    <i class="fas fa-percentage"></i>
+                    <h3>Descuentos VIP</h3>
+                    <p>Precios especiales en toda nuestra colección.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nuance. Todos los derechos reservados.</p>
+
+        <div class="footer-social">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

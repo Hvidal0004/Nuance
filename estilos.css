@@ -9,38 +9,126 @@ body {
 h1, h2 {
     font-family: 'Dream Avenue', sans-serif;
     color: #333;
+}
+/* H1 centrados, en blanco y con fondo */
+h1 {
+    color: white;
     text-align: center;
+    background-image: url('imagenes/fondo-h1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    font-size: 3em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
 }
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: #333;
 }
 
 a:hover {
-    color: #2ecc71;
+    color: #333;
     transition: color 0.3s ease;
 }
 
-/* Estilo para los botones */
-.button {
-    background-color: #d7b58f;
+/* Estilo para el menú de navegación */
+nav {
+    background: linear-gradient(to bottom, #b38b6d, #ffffff);
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
     color: white;
-    padding: 10px 20px;
-    border: none;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 12px 18px;
+    transition: color 0.3s ease, transform 0.2s ease;
     border-radius: 5px;
+}
+
+nav a:hover {
+    color: #333;
+    transform: scale(1.1);
+}
+
+
+/* Ajustes para la imagen de fondo grande */
+
+.fondo-grande {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imagen-fondo {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    /* Puedes ajustar el tamaño del logo según necesites */
+}
+
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+
+/* Estilo para los botones */
+button {
+    background-color: #b38b6d;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #d7b58f;
-    transition: background-color 0.3s ease;
+    background-color: #8c6b53;
 }
 
 
 /* Estilos para el menú de navegación */
 nav {
-    background-color: #d7b58f;
+    background-color: #d5bca2;
     padding: 20px;
     text-align: center;
 }
@@ -64,7 +152,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #786c3b;
+    color: #d5bca2;
     transition: color 0.3s ease;
 }
 
@@ -89,8 +177,8 @@ nav ul {
 
 /* inicio */
 #inicio {
-    background-color: #d7b58f;
-    padding: 20px;
+    background-color: #d5bca2;
+    padding: 0px;
     text-align: center;
 }
 
@@ -100,12 +188,26 @@ nav ul {
 
 .nuevos-productos {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Esto es clave: organiza los elementos en columna */
+    align-items: center;
     margin-top: 20px;
+    text-align: center;
+}
+
+.nuevos-productos h2 {
+    margin-bottom: 20px; /* Espacio entre el título y las imágenes */
+}
+
+.contenedor-productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los productos */
+    width: 100%;
 }
 
 .producto {
-    width: 30%;
+    width: 40%;
+    height: 700px;
     margin: 10px;
     background-color: white;
     padding: 10px;
@@ -115,7 +217,7 @@ nav ul {
 
 .producto img {
     width: 100%;
-    height: 150px;
+    height: 100%;
     object-fit: cover;
     border-radius: 5px 5px 0 0;
 }
@@ -125,64 +227,109 @@ nav ul {
     transition: transform 0.3s ease;
 }
 
-/* Estilos para la sección de influencers */
+/* Estilo para la sección de influencers tipo cartas */
 .influencers {
     text-align: center;
-    margin-top: 20px;
+    margin: 10px auto;
+    padding: 0px;
+    max-width: 800px;
 }
 
-.influencer-carousel {
+.influencers h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.card-container {
     position: relative;
-    width: 80%;
+    height: 450px; /* Altura fija para evitar saltos */
     margin: 0 auto;
-    padding: 20px;
+}
+
+.influencer-card {
+    display: none; /* Ocultar todas las tarjetas por defecto */
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    max-width: 350px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
 }
 
-.carousel-item {
-    display: none;
+.influencer-card.active {
+    display: block; /* Mostrar solo la tarjeta activa */
 }
 
-.carousel-item.active {
-    display: block;
-}
-
-.carousel-item img {
+.influencer-card img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
 }
 
 .influencer-info {
-    padding: 10px;
+    padding: 20px;
 }
 
-.carousel-controls {
-    margin-top: 10px;
+.influencer-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.carousel-controls button {
-    background-color: #d7b58f;
+.influencer-info p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.card-controls {
+    margin-top: 0px;
+}
+
+.card-controls button {
+    background-color: #d5bca2;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.carousel-controls button:hover {
-    background-color: #d7b58f;
-    transition: background-color 0.3s ease;
+.card-controls button:hover {
+    background-color: #333;
+    transform: scale(1.05);
 }
-
-
-/* Tienda */
 
 #tienda {
     padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.tienda-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fondo-tienda {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulo-tienda {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
 }
 
 .categorias {
@@ -204,7 +351,7 @@ nav ul {
 }
 
 .categoria a:hover {
-    color: #2ecc71;
+    color: #333;
 }
 
 #hombre, #mujer, #accesorios, #regalos {
@@ -218,49 +365,177 @@ nav ul {
 .imagenes-productos {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
-.imagenes-productos img {
+.producto-item {
     width: 30%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
     margin: 10px;
-}
-
-.imagenes-productos img:hover {
-    transform: scale(1.05);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
     transition: transform 0.3s ease;
 }
 
+.producto-item:hover {
+    transform: scale(1.03);
+}
 
+.producto-item img {
+    width: 100%;
+    height: 300px; /* Imágenes más largas */
+    object-fit: cover;
+    display: block;
+}
 
-
-/* Apla Nuance*/
-
-#apla-nuance {
-    background-image: linear-gradient(to bottom, #d7b58f, #ffffff);
-    padding: 20px;
+.producto-info {
+    padding: 15px;
+    background-color: white;
     text-align: center;
 }
 
-.producto-limitado {
-    margin-top: 20px;
+.precio {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 5px 0;
 }
 
-.producto-limitado img {
+.btn-carrito {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
+    margin-top: 8px;
 }
 
-.producto-limitado:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+.btn-carrito:hover {
+    background-color: #555;
 }
 
+/* Estilos para la sección AplaNuance */
+#apla-nuance {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.apla-header {
+    text-align: center;
+    margin-bottom: 40px; /* Reducido el margen inferior */
+    position: relative;
+    background-image: url('imagenes/viyate.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; /* Aumentado el padding para hacer la sección más alta */
+    border-radius: 10px;
+}
+
+/* Eliminamos el overlay para mantener los colores originales */
+
+.apla-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Añadimos sombra para mejor legibilidad */
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Añadimos sombra para mejor legibilidad */
+}
+
+.producto-limitado-container {
+    margin: 40px 0;
+}
+
+.producto-limitado {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.producto-info {
+    padding: 30px;
+}
+
+.producto-info h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.tiempo-restante {
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.btn-participar {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-participar:hover {
+    background-color: #555;
+}
+
+.beneficios {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.beneficios h2 {
+    margin-bottom: 30px;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.beneficio {
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.beneficio h3 {
+    margin-bottom: 10px;
+}
 /* Footer */
 
 footer {
@@ -316,13 +591,11 @@ footer {
     }
 }
 
-/* Contactanos*/
-
-sec
 
 /* Estilos para la sección de Contactanos */
 #contactanos {
     padding: 20px;
+    background-color: #d5bca2;
 }
 
 #contactanos form {
@@ -348,7 +621,7 @@ sec
 
 #contactanos button {
     padding: 10px 20px;
-    background-color: #d6cfc8;
+    background-color: #d5bca2;
     color: #333;
     border: none;
     border-radius: 5px; /* Bordes redondeados */
@@ -356,6 +629,293 @@ sec
 }
 
 #contactanos button:hover {
-    background-color: #c9c4b5;
+    background-color: #d5bca2;
     transition: background-color 0.3s ease;
 }
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header y navegación */
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #7c7c7c;
+  }
+  
+  /* Hero section */
+  #sobre-nosotros-hero {
+    background-image: url('imagenes/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  #sobre-nosotros-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  /* Secciones */
+  section {
+    padding: 80px 0;
+  }
+  
+  section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #333;
+    margin: 15px auto 0;
+  }
+  
+  /* Nuestra Historia */
+  .historia-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .historia-texto {
+    flex: 1;
+  }
+  
+  .historia-texto p {
+    margin-bottom: 20px;
+  }
+  
+  .historia-imagen {
+    flex: 1;
+  }
+  
+  .historia-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Nuestros Valores */
+  #nuestros-valores {
+    background-color: #f9f9f9;
+  }
+  
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .valor-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .valor-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .valor-card i {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .valor-card h3 {
+    margin-bottom: 15px;
+  }
+  
+  /* Nuestro Equipo */
+  .equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .miembro-equipo {
+    text-align: center;
+  }
+  
+  .miembro-equipo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .miembro-equipo h3 {
+    margin-bottom: 5px;
+  }
+  
+  .miembro-equipo p {
+    color: #666;
+  }
+  
+  /* Compromiso Sostenible */
+  #compromiso-sostenible {
+    background-color: #f9f9f9;
+  }
+  
+  .compromiso-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .compromiso-imagen {
+    flex: 1;
+  }
+  
+  .compromiso-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .compromiso-texto {
+    flex: 1;
+  }
+  
+  .compromiso-texto p {
+    margin-bottom: 20px;
+  }
+  
+  .compromiso-texto ul {
+    padding-left: 20px;
+  }
+  
+  .compromiso-texto li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0 20px;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+  }
+  
+  .footer-links h3,
+  .footer-newsletter h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #fff;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .footer-newsletter input {
+    flex: 1;
+    padding;
