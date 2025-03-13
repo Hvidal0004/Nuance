@@ -141,6 +141,20 @@ nav ul {
     nav li {
         margin-bottom: 20px;
     }
+
+    .producto-item {
+      width: 100%; 
+      margin: 0px auto; 
+  }
+  
+  .btn-carrito {
+      padding: 12px 20px; 
+      font-size: 1.1rem; 
+  }
+  
+  .producto-info {
+      padding: 10px; 
+  }
 }
 
 
@@ -276,6 +290,7 @@ nav ul {
     padding: 20px;
     position: relative;
     width: 100%;
+    text-align: center; 
 }
 
 .tienda-container {
@@ -301,9 +316,16 @@ nav ul {
     z-index: 2;
 }
 
+.categoria {
+    text-align: center; 
+    margin: 0 10px;
+}
+
 .categorias {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
 }
 
 .categoria ul {
@@ -333,13 +355,13 @@ nav ul {
 
 .imagenes-productos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
 }
 
 .producto-item {
-    width: 30%;
+    width: 40%;
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -353,7 +375,7 @@ nav ul {
 
 .producto-item img {
     width: 100%;
-    height: 300px; /* Imágenes más largas */
+    height: 300px; 
     object-fit: cover;
     display: block;
 }
@@ -374,12 +396,14 @@ nav ul {
     background-color: #333;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%;
     margin-top: 8px;
+    font-size: 1rem ;
+    font-weight: bold;
 }
 
 .btn-carrito:hover {
