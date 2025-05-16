@@ -1,0 +1,273 @@
+/* Header y navegación */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+.nav-desktop ul {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-desktop a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.nav-desktop a:hover {
+  color: #666;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.account-link {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Menú desplegable de categorías */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  padding: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content h4 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.dropdown-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-content a {
+  font-size: 0.8125rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #666;
+}
+
+.dropdown-content a:hover {
+  color: #000;
+}
+
+/* Footer */
+footer {
+  padding: 48px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.footer-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-link {
+  font-size: 0.875rem;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #000;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #000;
+  color: #fff;
+  padding: 64px 0;
+}
+
+.newsletter-content {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.newsletter-text {
+  color: #999;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 12px 16px;
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.newsletter-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0 24px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.breadcrumbs-item {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "/";
+  margin-left: 8px;
+  color: #ccc;
+}
+
+.breadcrumbs-item:last-child {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-desktop {
+    display: block;
+  }
+
+  .account-link {
+    display: block;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}

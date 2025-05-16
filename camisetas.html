@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camisetas - NUANCE</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">NUANCE</a>
+      
+      <nav class="nav-desktop">
+        <ul>
+          <li class="dropdown">
+            <a href="shop.html">Tienda</a>
+            <div class="dropdown-content">
+              <h4>Categorías</h4>
+              <ul>
+                <li><a href="hombre.html">Hombre</a></li>
+                <li><a href="mujer.html">Mujer</a></li>
+                <li><a href="accesorios.html">Accesorios</a></li>
+                <li><a href="todos-productos.html">Todos los productos</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="events.html">Eventos</a>
+            <div class="dropdown-content">
+              <h4>Eventos</h4>
+              <ul>
+                <li><a href="events.html#upcoming">Próximos eventos</a></li>
+                <li><a href="events.html#past">Eventos pasados</a></li>
+                <li><a href="events.html#gallery">Galería</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html">Sobre nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="cuenta.html" class="account-link">Cuenta</a>
+        <a href="carrito.html" aria-label="Carrito de compra">
+          <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container breadcrumbs">
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumbs-item"><a href="todos-productos.html">Shop</a></li>
+        <li class="breadcrumbs-item">Camisetas</li>
+      </ul>
+    </div>
+
+    <section class="container category-header">
+      <h1 class="category-title">Camisetas</h1>
+      <p class="category-description">
+        Nuestra colección de camisetas combina diseños minimalistas con materiales de alta calidad para un estilo atemporal y confortable.
+      </p>
+    </section>
+
+    <section class="container">
+      <div class="filters">
+        <div class="filter-group">
+          <button class="filter-btn">
+            <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            Filtrar
+          </button>
+          <button class="filter-btn">Precio</button>
+          <button class="filter-btn">Color</button>
+          <button class="filter-btn">Talla</button>
+        </div>
+        
+        <select class="sort-select">
+          <option value="newest">Más recientes</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+          <option value="name-asc">Nombre: A-Z</option>
+          <option value="name-desc">Nombre: Z-A</option>
+        </select>
+      </div>
+      
+      <div class="subcategories">
+        <a href="#" class="subcategory-link active">Todos</a>
+        <a href="#" class="subcategory-link">Básicas</a>
+        <a href="#" class="subcategory-link">Gráficas</a>
+        <a href="#" class="subcategory-link">Oversize</a>
+        <a href="#" class="subcategory-link">Manga larga</a>
+      </div>
+      
+      <div class="products-grid">
+        <a href="producto.html" class="product-card" data-product-id="1">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+1" alt="T-Shirt 1" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Básica Blanca</h3>
+          <p class="product-price">€45.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="2">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+2" alt="T-Shirt 2" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Logo Negro</h3>
+          <p class="product-price">€50.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="3">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+3" alt="T-Shirt 3" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Oversize Gris</h3>
+          <p class="product-price">€55.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="4">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+4" alt="T-Shirt 4" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Gráfica Vintage</h3>
+          <p class="product-price">€60.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="5">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+5" alt="T-Shirt 5" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Manga Larga Negra</h3>
+          <p class="product-price">€65.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="6">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+6" alt="T-Shirt 6" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Estampada</h3>
+          <p class="product-price">€55.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="7">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+7" alt="T-Shirt 7" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Básica Negra</h3>
+          <p class="product-price">€45.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="8">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+8" alt="T-Shirt 8" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Logo Blanco</h3>
+          <p class="product-price">€50.00</p>
+        </a>
+        
+        <a href="producto.html" class="product-card" data-product-id="9">
+          <div class="product-img-container">
+            <img src="https://placehold.co/450x600/EEEEEE/999999/png?text=T-Shirt+9" alt="T-Shirt 9" class="product-img">
+          </div>
+          <h3 class="product-title">Camiseta Oversize Beige</h3>
+          <p class="product-price">€55.00</p>
+        </a>
+      </div>
+      
+      <div class="pagination">
+        <a href="#" class="pagination-btn active">1</a>
+        <a href="#" class="pagination-btn">2</a>
+        <a href="#" class="pagination-btn">3</a>
+        <a href="#" class="pagination-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container newsletter-content">
+        <h2 class="newsletter-title">Join Our Newsletter</h2>
+        <p class="newsletter-text">
+          Subscribe to receive updates, access to exclusive deals, and more.
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Tienda</h3>
+        <ul class="footer-links">
+          <li><a href="todos-productos.html" class="footer-link">New Arrivals</a></li>
+          <li><a href="todos-productos.html" class="footer-link">Best Sellers</a></li>
+          <li><a href="mujer.html" class="footer-link">Mujer</a></li>
+          <li><a href="hombre.html" class="footer-link">Hombre</a></li>
+          <li><a href="accesorios.html" class="footer-link">Accessorios</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Ayuda</h3>
+        <ul class="footer-links">
+          <li><a href="contacto.html" class="footer-link">Servicios </a></li>
+          <li><a href="envios-devoluciones.html" class="footer-link">Compras y devoluciones</a></li>
+          <li><a href="guia-tallas.html" class="footer-link">Guia de tallas</a></li>
+          <li><a href="faqs.html" class="footer-link">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Sobre</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">Nuestra historia</a></li>
+          <li><a href="sostenibilidad.html" class="footer-link">Sostenibilidad</a></li>
+          <li><a href="careers.html" class="footer-link">Carrera</a></li>
+          <li><a href="prensa.html" class="footer-link">Prensa</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Contactar</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+        <p class="copyright">
+          © 2024 Nuance.<br>
+          Derecho reservado.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
