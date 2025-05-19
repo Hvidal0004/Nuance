@@ -327,6 +327,11 @@ section {
   display: block;
 }
 
+.about-img {
+  max-width: 100%;
+  height: 30%;
+}
+
 /* Media queries */
 @media (min-width: 768px) {
   .hero-title {
