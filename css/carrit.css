@@ -1,0 +1,387 @@
+/* === Estilos generales === */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #222;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === Header === */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-desktop ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-desktop a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.account-link,
+.cart-icon {
+  color: black;
+  text-decoration: none;
+}
+
+.cart-count {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+/* === Migas de pan (breadcrumbs) === */
+.breadcrumbs-list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs-item::after {
+  content: "/";
+  margin-left: 0.5rem;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: "";
+}
+
+/* === Sección de producto === */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-gallery {
+  flex: 1 1 40%;
+  max-width: 500px;
+}
+
+.product-main-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.product-thumbnail.active {
+  border-color: black;
+}
+
+.product-info {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.product-description {
+  color: #444;
+}
+
+.product-colors .color-title,
+.product-sizes .size-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.color-options,
+.size-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-option.active {
+  border-color: black;
+}
+
+.color-black { background-color: black; }
+.color-white { background-color: white; border: 1px solid #ccc; }
+.color-gray { background-color: gray; }
+.color-beige { background-color: #d9c9a9; }
+
+.size-option {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.size-option.active {
+  background-color: black;
+  color: white;
+}
+
+.size-option.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* === Cantidad y botones === */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-btn {
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.add-to-cart-btn,
+.wishlist-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover,
+.wishlist-btn:hover {
+  background-color: #333;
+}
+
+.wishlist-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* === Detalles del producto === */
+.product-details {
+  margin-top: 1.5rem;
+}
+
+.details-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.details-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #444;
+}
+
+/* === Acordeón === */
+.accordion-item {
+  border-top: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font-weight: bold;
+}
+
+.accordion-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* === Newsletter === */
+.newsletter {
+  background-color: #f7f7f7;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-text {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  min-width: 250px;
+}
+
+.newsletter-btn {
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* === Footer === */
+footer {
+  background-color: #f1f1f1;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.legal-link {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+  }
+  
+  .product-gallery,
+  .product-info {
+    flex: 1 1 100%;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+}
